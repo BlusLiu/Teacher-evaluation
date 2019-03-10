@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+
+
+    <block else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2958932615,1477086378&fm=26&gp=0.jpg" mode="cover"></image>
+      
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view>
+  <buttom>
+    登陆
+  </buttom>
+  </view>
+</view>
