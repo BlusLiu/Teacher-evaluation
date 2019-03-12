@@ -12,7 +12,7 @@
 
 <view class="container">
   <view class="userinfo">
-    <button class="u-login-btn" hover-class="z-hover" open-type="getUserInfo" bindgetuserinfo='handerGetUserInfo'>
+    <button class="u-login-btn">
       <image class="u-btnicon" src="../../img/weixin.png"></image>
       微信授权登录
     </button>
@@ -21,4 +21,10 @@
       src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2958932615,1477086378&fm=26&gp=0.jpg" mode="cover"></image> 
     </block>-->
   </view>
+  <view>
+  <button type='primary' bindtap='jumpPage'>
+  xx
+  </button>
+  </view>
+  
 </view>
