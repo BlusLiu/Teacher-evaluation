@@ -1,19 +1,24 @@
 <!--index.wxml-->
+<view class="txt-logo">
+  <image class="img" 
+  src="../../img/logo.jpg">
+  </image>
+  <text class="txt-logo-txt" space="ensp">师 生 谊</text>
+</view>
+
+  <view class="usermotto userinfo">
+    <text class="user-motto" space="emsp">—— {{motto}} ——</text>
+  </view>
+
 <view class="container">
   <view class="userinfo">
-
-
-    <block else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2958932615,1477086378&fm=26&gp=0.jpg" mode="cover"></image>
-      
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <view>
-  <buttom>
-    登陆
-  </buttom>
+    <button class="u-login-btn" hover-class="z-hover" open-type="getUserInfo" bindgetuserinfo='handerGetUserInfo'>
+      <image class="u-btnicon" src="../../img/weixin.png"></image>
+      微信授权登录
+    </button>
+    <!--<block else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" 
+      src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2958932615,1477086378&fm=26&gp=0.jpg" mode="cover"></image> 
+    </block>-->
   </view>
 </view>

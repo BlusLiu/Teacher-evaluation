@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/posts/daohang",
-    "pages/logs/logs"
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/posts/show",
+    "pages/lists/list"
   ],
   "window":{
     "backgroundTextStyle":"light",

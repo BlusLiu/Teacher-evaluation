@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '师生谊',
+    motto: '为师生谊干杯!',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -49,6 +49,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  handerGetUserInfo(){
+    wx.redirectTo({
+      url: '../lists/list',
     })
   }
 })

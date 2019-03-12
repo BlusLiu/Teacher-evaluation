@@ -1,0 +1,5 @@
+/* pages/lists/list.wxss */
+.techerinfo {
+  margin-top: 50px;
+  align-items: center;
+}
