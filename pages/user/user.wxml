@@ -1,0 +1,44 @@
+<!--pages/user/first.wxml-->
+<view class="top">
+    <image class="head-pic" src="../../img/head-pic.png" />
+    <view class="name">用户名:{{username}}</view>
+    <image class="write" src="../../img/icon-write.png"/>
+    <!--<view class="stid">学号：</view>
+    <view class="college">学院：</view>-->
+    <!--<image class="bgc" src="../../img/background.jpg" mode="aspectFill"/>-->
+</view>
+
+<view class="blank"></view>
+
+<view class="bt">
+    <button class="button button1" bindtap='myclass'>
+        <image class="button-img1" src="../../img/home.png" mode="aspectFit"></image>
+        <text class="button-txt">我的课程</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+    <button class="button" bindtap='myteacher'>
+        <image class="button-img1" src="../../img/teacher.png" mode="aspectFit"></image>
+        <text class="button-txt">我的老师</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+    <button class="button" bindtap='mydiscuss'>
+        <image class="button-img1" src="../../img/comment.png" mode="aspectFit"></image>
+        <text class="button-txt">我的评论</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+    <button class="button" bindtap='help'>
+        <image class="button-img1" src="../../img/icon_message.png" mode="aspectFit"></image>
+        <text class="button-txt">帮助与反馈</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+    <button class="button" bindtap='settings'><!--后续删除设置-->
+        <image class="button-img1" src="../../img/icon_set.png" mode="aspectFit"></image>
+        <text class="button-txt">设置</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+    <button class="button button2" bindtap='about'>
+        <image class="button-img1" src="../../img/icon_score.png" mode="aspectFit"></image>
+        <text class="button-txt">关于</text>
+        <image class="button-img2" src="../../img/next.png" mode="aspectFit"></image>
+    </button>
+</view>

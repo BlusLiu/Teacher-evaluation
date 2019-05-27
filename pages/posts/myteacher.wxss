@@ -1,0 +1,24 @@
+/* pages/posts/myteacher.wxss */
+.mtbutton{
+    width:90%;
+    display:flex;
+    justify-content: center;
+    margin-top: 25rpx;
+    border-radius: 30rpx;
+}
+.mtbutton::after{
+    border:none;
+}
+.mtclassname{
+    position: flex;
+    font-size: 36rpx;
+    font-weight: 500;
+    margin-left: 15rpx;
+    margin-top: -2rpx;
+}
+.mtimage{
+    margin-left: 430rpx;
+    height:40rpx;
+    width: 40rpx;
+    margin-top:24rpx;
+}

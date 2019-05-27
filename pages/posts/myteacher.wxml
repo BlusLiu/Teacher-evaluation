@@ -1,0 +1,6 @@
+<!--pages/posts/myteacher.wxml-->
+<button class="mtbutton">
+  <text class="mtclassname">舒亚飞</text>
+  <text class="mtgrade"></text>
+  <image class="mtimage" src="../../img/next.png" mode="aspectFit"></image>
+</button>

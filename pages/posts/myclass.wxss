@@ -1,0 +1,29 @@
+/* pages/posts/myclass.wxss */
+.mcbutton{
+    width:90%;
+    display:flex;
+    justify-content: center;
+    margin-top: 25rpx;
+    border-radius: 30rpx;
+}
+.mcbutton::after{
+    border:none;
+}
+.mcclassname{
+    position: fixed;
+    font-size: 36rpx;
+    font-weight: 500;
+    margin-left: -190rpx;
+    margin-top: -2rpx;
+}
+.mcgrade{
+    margin-left: 460rpx;
+    font-size: 36rpx;
+    font-weight: 500;
+}
+.mcimage{
+    margin-left: 40rpx;
+    height:40rpx;
+    width: 40rpx;
+    margin-top:28rpx;
+}

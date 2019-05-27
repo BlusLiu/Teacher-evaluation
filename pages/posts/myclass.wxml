@@ -1,0 +1,12 @@
+<!--pages/posts/myclass.wxml-->
+<button class="mcbutton">
+  <text class="mcclassname">微信小程序</text>
+  <text class="mcgrade">星级</text>
+  <image class="mcimage" src="../../img/next.png" mode="aspectFit"></image>
+</button>
+<button class="mcbutton">
+  <text class="mcclassname">web开发</text>
+  <text class="mcgrade">星级</text>
+  <image class="mcimage" src="../../img/next.png" mode="aspectFit"></image>
+</button>
+

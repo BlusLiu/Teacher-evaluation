@@ -1,0 +1,9 @@
+/* pages/posts/mydiscuss.wxss */
+.none{
+    position: absolute;
+    margin-top: 65%;
+    margin-left: 45%;
+    font-size: 44rpx;
+    font-weight: 500;
+    color: #c0c0c0;
+}

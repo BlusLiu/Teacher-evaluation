@@ -1,39 +1,47 @@
 {
-  "pages":[
+  "pages": [
+    "pages/posts/daohang",
+    "pages/user/user",
     "pages/index/index",
-    "pages/lists/list",
-  "pages/logs/logs",
-  
-  "pages/posts/show"
+    "pages/logs/logs",
+    "pages/posts/show",
+    "pages/first/first",
+    "pages/ranking/ranking",
+    "pages/posts/myclass",
+    "pages/posts/myteacher",
+    "pages/posts/mydiscuss",
+    "pages/posts/help",
+    "pages/posts/settings",
+    "pages/posts/about",
+    "pages/teacher/teacherDetail",
+    "pages/teacher/star",
+    "pages/search/search",
+    "pages/posts/type"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "师生谊",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "black",
+    "selectedColor": "black",
+    "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "用户",
-        "selectedIconPath": "/img/用户.png",
-        "iconPath": "/img/用户.png"
+        "selectedIconPath": "img/search-1.png",
+        "iconPath": "img/search-0.png",
+        "text": "评价",
+        "pagePath": "pages/posts/daohang"
       },
       {
-        "pagePath": "pages/posts/show",
-        "text": "喜爱",
-        "selectedIconPath": "/img/喜爱.png",
-        "iconPath": "/img/喜爱.png"
-      },
-      {
-        "pagePath": "pages/lists/list",
-        "text": "清单",
-        "selectedIconPath": "/img/清单.png",
-        "iconPath": "/img/清单.png"
+        "selectedIconPath": "img/user-0.png",
+        "iconPath": "img/user-1.png",
+        "text": "个人",
+        "pagePath": "pages/user/user"
       }
-    ],
-    "color": "#8B4513",
-    "selectedColor": "#FF6347"
-  }
+    ]
+  },
+  "cloud": true
 }

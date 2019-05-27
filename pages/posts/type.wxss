@@ -1,0 +1,8 @@
+/* pages/posts/type.wxss */
+@import "daohang.wxss";
+.type{
+  margin-top:0;
+}
+.type::after{
+  border:none;
+}

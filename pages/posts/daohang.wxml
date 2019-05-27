@@ -1,0 +1,62 @@
+ <!--<navigator
+    target="self"
+    open-type="navigate"    
+    url='/pages/posts/show?id=1'    
+  >
+    第1篇博文
+  </navigator>
+
+  <navigator
+    target="self"
+    open-type="navigate"    
+    url='/pages/posts/show?id=2'    
+  >
+    第2篇博文
+  </navigator>-->
+
+<view class="search">
+  <button class="search-button" bindtap='toSearch'>
+    <icon type="search" size="18" class="search-icon"/>
+    <view class="search-text">搜索</view>
+  </button>
+</view>
+
+<view>
+  <swiper class="lunbo" indicator-dots="true" autoplay="true" interval="3000" circular="true">
+      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
+      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
+      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
+      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
+  </swiper>
+</view>
+
+<view class="type">
+  <view class="type-line">
+    <block wx:for="{{type}}" wx:for-index="index" wx:for-item="type">
+      <navigator url="type?id={{index}}">
+        <view class="type-list type-list">
+        <image src="{{type.pic}}" class="type-list-pic"></image>
+        <view class="type-list-txt">{{type.name}}</view>
+        </view>
+    </navigator>
+    </block>
+  </view>
+</view>
+
+<view class="ranking">
+  <view class="ranking-title">星级排名</view>
+  <view class="ranking-top">
+    <view class="ranking-top-grade">星级</view>
+    <view class="ranking-top-peoplenumber">点评人数</view>
+  </view>
+   <block wx:for="{{teacher}}" wx:for-index="index" wx:for-item="teacher">
+    <navigator class="ranking-list" url="../teacher/teacherDetail?id={{teacher.id}}" ><!-- 根据index确定页面内容（未完成） -->
+      <image src="{{teacher.pic}}" class="ranking-list-pic"></image>
+      <view class="ranking-list-teachername">{{teacher.name}}</view>
+      <view class="ranking-list-teachclass">{{teacher.class}}</view>
+      <view class="ranking-list-grade">{{teacher.grade}}</view>
+      <view class="ranking-list-peoplenumber">{{teacher.peoplenumber}}</view>
+    </navigator>
+  <view class="ranking-line"></view>
+  </block>
+</view>

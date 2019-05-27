@@ -1,24 +1,7 @@
 // pages/lists/list.js
+const teacher = require('../../utils/teachers.js')
 
-let teacher = [
-  {
-    title: '舒老师',
-    content: '开设课程xxx'
-  },
-  {
-    title: '刘老师',
-    content: '开设课程xxx'
-  },
-  {
-    title: '李老师',
-    content: '开设课程xxx'
-  },
-  {
-    title: 'jack老师',
-    content: '开设课程xxx'
-  }
-  
-]
+
 
 Page({
 
@@ -32,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showTabBar({})
   },
 
   /**
@@ -46,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({teacher : teacher})
   },
 
   /**
@@ -84,3 +67,4 @@ Page({
 
   }
 })
+module.exports = teacher

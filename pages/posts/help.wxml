@@ -1,0 +1,7 @@
+<!--pages/posts/help.wxml-->
+ <view class='accessWrapper'> 
+  <textarea bindinput='textAreaCon' placeholder='写点意见或建议...' auto-focus='true'></textarea> 
+  <view class='uploadFile' bindtap='upload'>+</view> 
+ </view>
+
+ <button type='submit' bindtap='saveAccess' class='save-edit'>提交</button> 

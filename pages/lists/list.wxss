@@ -3,3 +3,34 @@
   margin-top: 50px;
   align-items: center;
 }
+
+.ul {
+  margin: 0 auto;
+
+  ///max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px 5px 0 5px;
+  border-left: none;
+  border-right: none;
+}
+
+.li {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: 
+    linear-gradient(
+      90deg,
+      #FFD32E 10px,
+      #EEE 10px,
+      #EEE 11px,
+      transparent 11px);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+}

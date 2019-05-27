@@ -1,0 +1,19 @@
+<!--pages/posts/new.wxml-->
+<form bindsubmit="formSubmit" data-hi="WeChat" bindreset="formReset">  
+  <view >
+    <view >标题</view>
+    <input name="title" type="text" placeholder= "{{title}}"/>
+  </view>
+
+  <view >
+    <view >正文</view>
+    <textarea name="content" placeholder= "{{content}}">    
+    </textarea> 
+  </view>
+
+  <view >
+    <button form-type="submit">提交</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>
+

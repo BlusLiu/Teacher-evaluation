@@ -8,3 +8,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+page{
+  background: #f0f0f0;
+}

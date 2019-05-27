@@ -1,11 +1,14 @@
-<view class='techerinfo'>
-  <block  wx:for = "{{teacher}}">
-    <navigator
+<view class='ul'>
+  <block   wx:for = "{{teacher}}">
+  <view class='li'>
+  <navigator
       target="self"
       open-type="navigate"    
       url='/pages/posts/show?id={{index+1}}'    
     >
     <text >{{index+1}}. {{item.title}} </text>
     </navigator>
+  </view>
+    
   </block>
 </view>

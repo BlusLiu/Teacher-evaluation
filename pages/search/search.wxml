@@ -1,0 +1,17 @@
+<view class="search-hd">
+    <view class="search-area">
+        <form bindsubmit="search">
+            <view class="search-type" bindtap="changeSearchType">{{searchType == 'keyword' ? '老师' : '课程'}}</view>
+            <input class="search-txt" name="keyword" placeholder="{{searchType == 'keyword' ? '请输入老师名字' : '请输入课程名字'}}"/>
+            <button class="search-btn" formType="submit">搜索</button>
+        </form>
+    </view>
+    <view class="search-keyword">
+        <view class="search-keyword-title">热门搜索</view>
+        <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">{{hotKeywordItem.hotTagItem}}</view>
+        <view class="search-keyword-title">热门标签</view>
+        <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem.hotTagItem}}</view>        
+    </view>
+</view>
+<import src="../../component/message/message.wxml"/>
+<template is="message" data="{{message: message}}"/>

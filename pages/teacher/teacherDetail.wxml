@@ -1,0 +1,44 @@
+<view class="top">
+    <image class="head-pic" src="../../img/head-pic.png" />
+    <view class="name">{{name}}</view>
+    <view class="course">{{course}}</view>
+    <button class='btn' bindtap='pingjia'>我要评价</button>
+    <image class="bgc" src="../../img/background.jpg" mode="aspectFill"/>
+
+</view>
+<view class='two'>
+    <button class='two-one' bindtap='toOne'>评价</button> 
+    <button class='two-one' bindtap='toTwo'>详情</button> 
+</view>
+<block wx:if="{{two}}">
+<view class='label'>
+<view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem.hotTagItem}}</view>   
+</view>
+
+
+<view wx:for="{{commentData}}" wx:for-item="commentItem" class='userCommnet'>
+<image src='{{commentItem.img}}' class='img' />
+<view class='comment'>               
+    <view class="a" href="">{{commentItem.user}}</view>
+    <view class='p'>{{commentItem.comment}}</view>
+    <view class='span'>{{commentItem.date}}</view>
+    <view class='up' href="">赞</view>
+</view>
+</view>
+
+
+<image src='../../img/background.jpg' class='img' />
+<view class='comment'>               
+    <img src='img/1.png' alt='head pic' />
+    <view class="a" href="">lemon</view>
+    <view class='p'>这个老师超级超级号！</view>
+    <view class='span'>2019/5/12</view>
+    <view class='up' href="">赞</view>
+</view>
+</block>
+<block wx:if="{{!two}}">
+<view class='teacher-detail'>
+some detail
+</view>
+
+</block>

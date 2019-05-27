@@ -1,0 +1,154 @@
+/* pages/posts/daohang.wxss */
+/* pages/posts/刀hang.wxss */
+body{background:#F3F3F3;}
+.search{
+    display: inline-block;
+    height: 13%;
+    width:100%;
+}
+.search-icon{
+    float:left;
+    margin-left: 37%;
+    margin-top: 24rpx;
+}
+.search-button{
+    float:right;
+    width: 84%;
+    height: 80rpx;
+    border-radius: 50rpx;
+    margin-right: 8%;
+    margin-top:8rpx;
+}
+.search-button::after{
+    border:none;
+}
+.search-text{
+    font-size: 36rpx;
+    font-weight: 300;
+    color:#BBBBBB;
+    margin-right: 35%;
+    margin-top:-3rpx;
+}
+.lunbo{
+    margin-top:6rpx;
+    width: 100%;
+}
+.lunbo image{
+    width:100%;
+}
+.type{
+    margin-top: 2%;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    text-align: center;
+}
+.type-line{
+    overflow: auto;
+    padding-bottom: 3rpx;
+    text-align: center;
+    margin-top:10rpx;
+}
+.type-list{
+    float: left;
+    width: 25%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    word-wrap: wrap;
+    overflow: auto;
+}
+.type-list-pic{
+    text-align: center;
+    border-radius: 80rpx;
+    height:115rpx;
+    width:115rpx;
+    margin-top:10rpx;
+}
+.type-list-txt{
+    font-size:30rpx;
+    font-weight: 400;   
+}
+.ranking{
+    margin-top:2%;
+    width: 100%;
+    background-color: white;
+}
+.ranking-title{
+    text-align: center;
+    font:58rpx;
+    font-weight: 600;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+}
+.ranking-top{
+    font-size:32rpx;
+    font-weight: 500;
+    margin-bottom: 70rpx;
+}
+.ranking-top-grade{
+    position: absolute;
+    margin-left: 67%;
+}
+.ranking-top-peoplenumber{
+    position: absolute;
+    margin-left: 78%;
+}
+.ranking-list{
+    border-radius: 30rpx;
+    width: 100%;
+    height:140rpx;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+.ranking-list::after{
+  border: none;
+}
+.ranking-list-pic{
+    width: 130rpx;
+    height: 130rpx;
+    align-self: center;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+.ranking-list-teachername{
+    position: absolute;
+    font-size:32rpx;
+    font-weight: 500;
+    margin-top:15rpx;
+    margin-left: 180rpx;
+}
+.ranking-list-teachclass{
+    position: absolute;
+    margin-top:70rpx;
+    margin-left:180rpx;
+    font-size:32rpx;
+    font-weight:500;
+}
+.ranking-list-grade{
+    align-self: center;
+    margin-left: 50%;
+    font-size:32rpx;
+    font-weight: 500;
+    color: #E51C23;
+}
+.ranking-list-peoplenumber{
+    align-self: center;
+    font-size:32rpx;
+    font-weight: 500;
+    margin-left: 85rpx;
+}
+
+.ranking-line{
+    height: 1rpx;
+    width: 90%;
+    margin:0 auto;
+    text-align: center;
+    background: linear-gradient(left,rgba(255, 255, 255, 0),#5DDDD3,rgba(255,255,255,0));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),#5DDDD3,rgba(255,255,255,0));
+}
