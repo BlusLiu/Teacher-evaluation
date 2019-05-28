@@ -7,7 +7,8 @@ Page({
     halfSrc: '../../img/star/cc-star2.png',
     key: 1,//评分
     path: ' ',
-    userInput: ' '
+    userInput: ' ',
+    tid: ''
   },
   onLoad: function () {
 
@@ -34,7 +35,13 @@ Page({
       key: key
     })
   },
-
+  onLoad: function (options) {
+    let currtid = options['tid']
+    this.setData({
+      tid: currtid
+    })
+    console.log('currtid:'+currtid)
+  },
 
 
   upload: function () {
@@ -100,7 +107,9 @@ Page({
           comment: that.data.userInput,
           date: new Date(),
           img: "../../img/background.jpg",
-          user: "liu"
+          user: "liu",
+          tid:that.data.tid,
+          star: that.data.key
 
         },
         success: function (res) {
@@ -116,7 +125,7 @@ Page({
         }
       })
       wx.navigateTo({
-        url: '../teacher/teacherDetail?comment=' + this.data.userInput,
+        url: '../teacher/teacherDetail?tid=' + this.data.tid,
       })
 
 

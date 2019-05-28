@@ -29,22 +29,6 @@ Page({
         class: '教授课程',
         grade: '0.0',
         peoplenumber: '0'
-      },
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '教师姓名',
-        class: '教授课程',
-        grade: '0.0',
-        peoplenumber: '0'
-      },
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '教师姓名',
-        class: '教授课程',
-        grade: '0.0',
-        peoplenumber: '0'
       }
     ],
     type: [
@@ -95,9 +79,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   toTeacher:function(){
-      wx.navigateTo({
-        url: '../teacher/teacherDetail',
-      })
+      //wx.navigateTo({
+      //  url: '../teacher/teacherDetail',
+      //})
   },
   toSearch:
     function () {
@@ -106,6 +90,41 @@ Page({
       })
     },
   onLoad: function (options) {
+    let page = this
+    wx.cloud.init({
+      env: 'test-8f1460',
+      traceUser: true
+    });
+    const db = wx.cloud.database();
+
+    db.collection('category').get({//修改
+      success(res) {
+        console.log(res.data)
+        var item = {}
+        var i = 0
+        for (item in res.data) {
+          console.log(res.data[i])
+          i++
+        }
+        page.setData({ type: res.data })
+      }
+
+    })
+
+    db.collection('courses').orderBy('peoplenumber', 'desc').get({//修改
+      success(res) {
+        console.log(res.data)
+        var item = {}
+        var i = 0
+        for (item in res.data) {
+          console.log(res.data[i])
+          i++
+        }
+        page.setData({ teacher: res.data })
+      }
+
+    })
+    
 
   },
 

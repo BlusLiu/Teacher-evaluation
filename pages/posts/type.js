@@ -6,46 +6,6 @@ Page({
    */
   data: {
     teacher: [
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '舒亚飞',
-        class: '微信小程序',
-        grade: '5.0',
-        peoplenumber: '1'
-      },
-      {
-        id: 1,
-        pic: '../../img/background.jpg',
-        name: '舒亚飞',
-        class: '微信小程序',
-        grade: '5.0',
-        peoplenumber: '1'
-      },
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '教师姓名',
-        class: '微信小程序',
-        grade: '0.0',
-        peoplenumber: '0'
-      },
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '教师姓名',
-        class: '微信小程序',
-        grade: '0.0',
-        peoplenumber: '0'
-      },
-      {
-        id: 0,
-        pic: '../../img/background.jpg',
-        name: '教师姓名',
-        class: '微信小程序',
-        grade: '0.0',
-        peoplenumber: '0'
-      }
     ]
 
   },
@@ -54,7 +14,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let id = options['cid']
+    let page = this
+    wx.cloud.init({
+      env: 'test-8f1460',
+      traceUser: true
+    });
+    const db = wx.cloud.database();
 
+    db.collection('courses').where({
+      cid : id
+    }).get({//修改
+      success(res) {
+        console.log(res.data)
+        var item = {}
+        var i = 0
+        for (item in res.data) {
+          console.log(res.data[i])
+          i++
+        }
+        page.setData({ teacher: res.data })
+      }
+
+    })
   },
 
   /**

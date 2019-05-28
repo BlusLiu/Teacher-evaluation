@@ -37,4 +37,7 @@
 			"list": []
 		}
 	}
+  ,
+  "cloudfunctionRoot": "./functions/"
+  
 }

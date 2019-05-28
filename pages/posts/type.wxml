@@ -7,10 +7,10 @@
    <block wx:for="{{teacher}}" wx:for-index="index" wx:for-item="teacher">
     <navigator class="ranking-list" url="../teacher/teacherDetail?id={{teacher.id}}" ><!-- 根据index确定页面内容（未完成） -->
       <image src="{{teacher.pic}}" class="ranking-list-pic"></image>
-      <view class="ranking-list-teachername">{{teacher.name}}</view>
-      <view class="ranking-list-teachclass">{{teacher.class}}</view>
-      <view class="ranking-list-grade">{{teacher.grade}}</view>
-      <view class="ranking-list-peoplenumber">{{teacher.peoplenumber}}</view>
+      <view class="ranking-list-teachername">{{teacher.tname}}</view>
+      <view class="ranking-list-teachclass">{{teacher.cname}}</view>
+      <view class="ranking-list-grade">{{teacher.star}}</view>
+      <view class="ranking-list-peoplenumber">{{teacher.star_people}}</view>
     </navigator>
   <view class="ranking-line"></view>
   </block>

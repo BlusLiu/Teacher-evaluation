@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/posts/daohang",
     "pages/user/user",
     "pages/index/index",

@@ -1,16 +1,47 @@
 <view class="top">
     <image class="head-pic" src="../../img/head-pic.png" />
-    <view class="name">{{name}}</view>
-    <view class="course">{{course}}</view>
+    <view class="name">{{tname}}</view>
+    <view class="course">{{cname}}</view>
     <button class='btn' bindtap='pingjia'>我要评价</button>
     <image class="bgc" src="../../img/background.jpg" mode="aspectFill"/>
 
 </view>
+
+
 <view class='two'>
-    <button class='two-one' bindtap='toOne'>评价</button> 
-    <button class='two-one' bindtap='toTwo'>详情</button> 
+    <button class='two-one' bindtap='toOne'>
+      <view>评论</view>
+      <view class="two-line" wx:if="{{two}}"></view>
+    </button> 
+    <button class='two-one' bindtap='toTwo'>
+      <view>详情</view>
+      <view class="two-line" wx:if="{{!two}}"></view>
+    </button> 
 </view>
+
+
 <block wx:if="{{two}}">
+
+<view class="gradebox">
+  <view class="grade">{{star}}</view>
+  <view class="stars">
+    <view class="stars-txt">星级评分</view>
+    <view class="stars-img">{{star}}颗星</view><!--后改为星星图片-->
+  </view>
+  <view class="class">
+    <view class="class-txt">答疑</view>
+    <view class="class-grade">{{star}}</view>
+  </view>
+  <view class="answer">
+    <view class="answer-txt">课堂</view>
+    <view class="answer-grade">{{star}}</view>
+  </view>
+  <view class="homework">
+    <view class="homework-txt">作业</view>
+    <view class="homework-grade">{{star}}</view>
+  </view>
+</view>
+
 <view class='label'>
 <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem.hotTagItem}}</view>   
 </view>
@@ -21,7 +52,7 @@
 <view class='comment'>               
     <view class="a" href="">{{commentItem.user}}</view>
     <view class='p'>{{commentItem.comment}}</view>
-    <view class='span'>{{commentItem.date}}</view>
+    <view class='span'>{{commentItem.dateStr}}</view>
     <view class='up' href="">赞</view>
 </view>
 </view>
@@ -37,8 +68,30 @@
 </view>
 </block>
 <block wx:if="{{!two}}">
-<view class='teacher-detail'>
-some detail
-</view>
-
+  <view class='teacher-detail'>
+    <view class="office detail-line">
+      <view class="office-txt">教师办公室</view>
+      <view class="office-real">1教北111</view>
+    </view>
+    <view class="office detail-line">
+      <view class="office-txt">教师手机号</view>
+      <view class="office-real">12345678910</view>
+    </view>
+    <view class="office detail-line">
+      <view class="office-txt">教师QQ</view>
+      <view class="office-real">123456</view>
+    </view>
+    <view class="office detail-line">
+      <view class="office-txt">建议联系时间</view>
+      <view class="office-real">10:00-16:00</view>
+    </view>
+    <view class="office detail-line">
+      <view class="office-txt">所属学院</view>
+      <view class="office-real">计算机学院</view>
+    </view>
+    <view class="office">
+      <view class="office-txt">主攻方向</view>
+      <view class="office-real">前端技术</view>
+    </view>
+  </view>
 </block>

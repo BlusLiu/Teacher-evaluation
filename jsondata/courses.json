@@ -1,0 +1,41 @@
+
+{
+    "_id": "0",
+    "tid": "0",
+    "cid": "2",
+    "cname": "社会学",
+    "star": 4.5,
+    "star_people": 26,
+    "tname": "方建中",
+    "pic":"../../img/background.jpg"
+}
+{
+    "_id": "1",
+    "tid": "1",
+    "cid": "2",
+    "cname": "毛概",
+    "star": 4.5,
+    "star_people": 22,
+    "tname": "马婷婷",
+    "pic":"../../img/background.jpg"
+}
+{
+    "_id": "2",
+    "tid": "1",
+    "cid": "2",
+    "cname": "马原",
+    "star": 4.5,
+    "star_people": 22,
+    "tname": "马婷婷",
+    "pic":"../../img/background.jpg"
+}
+{
+    "_id": "3",
+    "tid": "2",
+    "cid": "1",
+    "cname": "小程序开发",
+    "star": 4.5,
+    "star_people": 33,
+    "tname": "舒亚非",
+    "pic":"../../img/background.jpg"
+}
