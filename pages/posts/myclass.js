@@ -11,6 +11,16 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  toC1 : function(){
+      wx.redirectTo({
+        url: 'myclass_detail?id=3',
+      })
+  },
+  toC2: function () {
+    wx.redirectTo({
+      url: 'myclass_detail?id=2',
+    })
+  },
   onLoad: function (options) {
 
   },

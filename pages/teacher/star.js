@@ -10,9 +10,7 @@ Page({
     userInput: ' ',
     tid: ''
   },
-  onLoad: function () {
 
-  },
 
   //点击右边,半颗星
   selectLeft: function (e) {

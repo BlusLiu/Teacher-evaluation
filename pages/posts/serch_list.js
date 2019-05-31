@@ -1,68 +1,61 @@
-// pages/posts/daohang.js
+// pages/posts/serch_list.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    teacher: [
-
-    ],
-    type: [
-      
-    ]
+    teacher:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  toTeacher:function(){
-      //wx.navigateTo({
-      //  url: '../teacher/teacherDetail',
-      //})
-  },
-  toSearch:
-    function () {
-      wx.navigateTo({
-        url: '../search/search',
-      })
-    },
   onLoad: function (options) {
+    let keyword = options['keyword']
+    let type = options['type']
+    console.log('type:'+type)
+    console.log('keyword:'+keyword)
     let page = this
     wx.cloud.init({
       env: 'test-8f1460',
       traceUser: true
     });
     const db = wx.cloud.database();
-
-    db.collection('category').get({//修改
-      success(res) {
-        //console.log(res.data)
-        var item = {}
-        var i = 0
-        for (item in res.data) {
-          //console.log(res.data[i])
-          i++
+    if (type=='teacher')
+    {
+      console.log('keyword:')
+      db.collection('courses').where({
+        tname: keyword
+      }).get({//修改
+        success(res) {
+          console.log(res.data)
+          var item = {}
+          var i = 0
+          for (item in res.data) {
+            console.log(res.data[i])
+            i++
+          }
+          page.setData({ teacher: res.data })
         }
-        page.setData({ type: res.data })
-      }
-
-    })
-
-    db.collection('courses').orderBy('peoplenumber', 'desc').get({//修改
-      success(res) {
-        console.log(res.data)
-        var item = {}
-        var i = 0
-        for (item in res.data) {
-          //console.log(res.data[i])
-          i++
+      })
+    }
+    else{
+      db.collection('courses').where({
+        cname: keyword
+      }).get({//修改
+        success(res) {
+          console.log(res.data)
+          var item = {}
+          var i = 0
+          for (item in res.data) {
+            console.log(res.data[i])
+            i++
+          }
+          page.setData({ teacher: res.data })
         }
-        page.setData({ teacher: res.data })
-      }
-
-    })
-    
+      })
+    }
 
   },
 

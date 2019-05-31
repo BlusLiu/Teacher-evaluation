@@ -5,14 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-      username:123456
+      username:null,
+      uid:'0'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    /*
+    //let currtid = options['id']
+    //console.log('currtid:' + currtid)
+    let page = this
+    this.onLoad
+    wx.cloud.init({
+      env: 'test-8f1460',
+      traceUser: true
+    });
+    const db = wx.cloud.database();
+    /*
+    db.collection('users').add({
+      data: {
+        _id: '0',
+        name: 'liu'
+      }
+    })
+      .then(res => {
+        console.log(res)
+      })
+    */
+    /*
+    db.collection('users').where({
+      _id: page.data.uid,
+    }).get({
+      success(res) {
+          page.setData({
+            username: res.data[0].name
+          })
+          
+        console.log('res.data.name:' + res.data[0].name)
+        
+      }
+    })
+*/
   },
 
   /**
@@ -26,7 +61,36 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let page = this
+    this.onLoad
+    wx.cloud.init({
+      env: 'test-8f1460',
+      traceUser: true
+    });
+    const db = wx.cloud.database();
+    /*
+    db.collection('users').add({
+      data: {
+        _id: '0',
+        name: 'liu'
+      }
+    })
+      .then(res => {
+        console.log(res)
+      })
+    */
+    db.collection('users').where({
+      _id: page.data.uid,
+    }).get({
+      success(res) {
+        page.setData({
+          username: res.data[0].name
+        })
 
+        console.log('res.data.name:' + res.data[0].name)
+
+      }
+    })
   },
 
   /**
@@ -62,6 +126,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  changename: function () {
+    wx.navigateTo({
+      url: './changename',
+    })
   },
   myclass: function () {
     wx.navigateTo({

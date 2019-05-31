@@ -1,4 +1,4 @@
-// pages/posts/daohang.js
+// pages/posts/myteacher_detail.js
 Page({
 
   /**
@@ -6,28 +6,14 @@ Page({
    */
   data: {
     teacher: [
-
-    ],
-    type: [
-      
     ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  toTeacher:function(){
-      //wx.navigateTo({
-      //  url: '../teacher/teacherDetail',
-      //})
-  },
-  toSearch:
-    function () {
-      wx.navigateTo({
-        url: '../search/search',
-      })
-    },
   onLoad: function (options) {
+    let id = options['tid']
     let page = this
     wx.cloud.init({
       env: 'test-8f1460',
@@ -35,35 +21,21 @@ Page({
     });
     const db = wx.cloud.database();
 
-    db.collection('category').get({//修改
-      success(res) {
-        //console.log(res.data)
-        var item = {}
-        var i = 0
-        for (item in res.data) {
-          //console.log(res.data[i])
-          i++
-        }
-        page.setData({ type: res.data })
-      }
-
-    })
-
-    db.collection('courses').orderBy('peoplenumber', 'desc').get({//修改
+    db.collection('courses').where({
+      tid: id
+    }).get({//修改
       success(res) {
         console.log(res.data)
         var item = {}
         var i = 0
         for (item in res.data) {
-          //console.log(res.data[i])
+          console.log(res.data[i])
           i++
         }
         page.setData({ teacher: res.data })
       }
 
     })
-    
-
   },
 
   /**

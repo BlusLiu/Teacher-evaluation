@@ -1,9 +1,11 @@
 <view class="top">
-    <image class="head-pic" src="../../img/head-pic.png" />
-    <view class="name">{{tname}}</view>
-    <view class="course">{{cname}}</view>
+    <image class="head-pic" src="{{pic}}" />
+    <view class="tea-cla">
+      <view class="name">{{tname}}</view>
+      <view class="course">{{cname}}</view>
+    </view>
     <button class='btn' bindtap='pingjia'>我要评价</button>
-    <image class="bgc" src="../../img/background.jpg" mode="aspectFill"/>
+    <image class="bgc" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236342036,891882353&fm=26&gp=0.jpg" mode="aspectFill" mode="aspectFill"/>
 
 </view>
 
@@ -46,26 +48,18 @@
 <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem.hotTagItem}}</view>   
 </view>
 
-
-<view wx:for="{{commentData}}" wx:for-item="commentItem" class='userCommnet'>
-<image src='{{commentItem.img}}' class='img' />
-<view class='comment'>               
-    <view class="a" href="">{{commentItem.user}}</view>
-    <view class='p'>{{commentItem.comment}}</view>
-    <view class='span'>{{commentItem.dateStr}}</view>
-    <view class='up' href="">赞</view>
+<view class="commentbox">
+ <view class='comment'  wx:for="{{commentData}}" wx:for-item="commentItem" >               
+      <image src='{{commentItem.img}}' class='img' />
+      <view class="a" href="">{{commentItem.user}}</view>
+      <view class='span'>{{commentItem.dateStr}}</view>
+      <view class="comment-line"></view>
+      <view class='p'>{{commentItem.comment}}</view>
+      <view class='up' href="">赞</view>
+  </view>
 </view>
-</view>
 
 
-<image src='../../img/background.jpg' class='img' />
-<view class='comment'>               
-    <img src='img/1.png' alt='head pic' />
-    <view class="a" href="">lemon</view>
-    <view class='p'>这个老师超级超级号！</view>
-    <view class='span'>2019/5/12</view>
-    <view class='up' href="">赞</view>
-</view>
 </block>
 <block wx:if="{{!two}}">
   <view class='teacher-detail'>

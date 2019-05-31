@@ -1,69 +1,37 @@
-// pages/posts/daohang.js
+// pages/posts/myclass_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    teacher: [
-
-    ],
-    type: [
-      
-    ]
+    teacher: {},
+    id: '',
+    tid:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  toTeacher:function(){
-      //wx.navigateTo({
-      //  url: '../teacher/teacherDetail',
-      //})
-  },
-  toSearch:
-    function () {
-      wx.navigateTo({
-        url: '../search/search',
-      })
-    },
   onLoad: function (options) {
+    let id = options['id']
     let page = this
+    page.setData({  id: id })
     wx.cloud.init({
       env: 'test-8f1460',
       traceUser: true
     });
     const db = wx.cloud.database();
 
-    db.collection('category').get({//修改
-      success(res) {
-        //console.log(res.data)
-        var item = {}
-        var i = 0
-        for (item in res.data) {
-          //console.log(res.data[i])
-          i++
-        }
-        page.setData({ type: res.data })
-      }
-
-    })
-
-    db.collection('courses').orderBy('peoplenumber', 'desc').get({//修改
+    db.collection('courses').doc(id).get({//修改
       success(res) {
         console.log(res.data)
-        var item = {}
-        var i = 0
-        for (item in res.data) {
-          //console.log(res.data[i])
-          i++
-        }
-        page.setData({ teacher: res.data })
+        
+        page.setData({ teacher: res.data ,
+          tid: res.data.tid})
       }
 
     })
-    
-
   },
 
   /**
@@ -77,7 +45,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

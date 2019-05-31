@@ -1,10 +1,11 @@
 // pages/teacher/teacherDetail.js
 Page({
   data: {
-    tname: '苏老师',
-    cname: '微信开发',
+    tname: '',
+    cname: '',
     tid: null,
     two: true,
+    pic:'',
     star: 5,
     hotTag: [{ 'hotTagItem': '有趣' }, { 'hotTagItem': '无聊' }, { 'hotTagItem': 'nice' }, { 'hotTagItem': '无聊' }, { 'hotTagItem': 'nice' }],
     commentData: []
@@ -12,7 +13,7 @@ Page({
 
   onLoad: function (options) {
     let currtid = options['id']
-    console.log(currtid)
+    console.log('currtid:' + currtid)
     let page = this
     wx.cloud.init({
       env: 'test-8f1460',
@@ -23,33 +24,35 @@ Page({
       tid: currtid,
     }).orderBy('date', 'desc').get({
       success(res) {
-        console.log(res.data)
-        console.log(res.data[0].date)
+        //console.log(res.data)
+        //console.log(res.data[0].date)
         var item ={}
         var i = 0
         page.setData({ commentData: res.data })
         for (item in page.data.commentData) {
           var tempTime = res.data[i].date.getFullYear() + "/" + res.data[i].date.getMonth() + "/"+res.data[i].date.getDate()
           page.data.commentData[i].dateStr = tempTime
-          console.log(tempTime)
-          console.log('page.data.commentData[i].dateStr:' + page.data.commentData[i].dateStr)
+          //console.log(tempTime)
+          //console.log('page.data.commentData[i].dateStr:' + page.data.commentData[i].dateStr)
           i++
         }
-        console.log('commentData:' + JSON.stringify(page.data.commentData))
+        //console.log('commentData:' + JSON.stringify(page.data.commentData))
         var tempComment = page.data.commentData
         page.setData({ commentData: tempComment })
       }
       
     })
+
     db.collection('courses').where({
-      tid: currtid 
+      _id: currtid
     }).get({
       success(res) {
-        console.log(res.data)
+        //console.log(res.data)
         page.setData({ tname: res.data[0].tname,
          cname: res.data[0].cname,
          star: res.data[0].star,
-         tid: res.data[0].tid
+         tid: res.data[0].tid,
+          pic: res.data[0].pic
           })
       }
 

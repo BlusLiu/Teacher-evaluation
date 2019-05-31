@@ -7,9 +7,9 @@
         </form>
     </view>
     <view class="search-keyword">
-        <view class="search-keyword-title">热门搜索</view>
+        <view class="search-keyword-title">热门老师</view>
         <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">{{hotKeywordItem.hotTagItem}}</view>
-        <view class="search-keyword-title">热门标签</view>
+        <view class="search-keyword-title">热门课程</view>
         <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-keyword="{{hotTagItem}}" bindtap="searchByTag">{{hotTagItem.hotTagItem}}</view>        
     </view>
 </view>

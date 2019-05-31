@@ -1,11 +1,11 @@
 <!--pages/posts/myclass.wxml-->
-<button class="mcbutton">
+<button class="mcbutton" bindtap='toC1'>
   <text class="mcclassname">微信小程序</text>
   <text class="mcgrade">星级</text>
   <image class="mcimage" src="../../img/next.png" mode="aspectFit"></image>
 </button>
-<button class="mcbutton">
-  <text class="mcclassname">web开发</text>
+<button class="mcbutton" bindtap='toC2'>
+  <text class="mcclassname">马克思原理</text>
   <text class="mcgrade">星级</text>
   <image class="mcimage" src="../../img/next.png" mode="aspectFit"></image>
 </button>

@@ -1,0 +1,11 @@
+<!--pages/posts/settings.wxml-->
+<view class='uploadFile' bindtap='upload'>
+  <!--<view class="touch">+</view>-->
+  <view><image class='img' mode="aspectFill" src='{{userimg}}'></image></view>
+</view>
+<view class="input">
+  <textarea class="new" bindinput='textAreaCon' placeholder='请输入新用户名' placeholder-style='text-align:center;' ></textarea>
+</view>
+<view class="button">
+  <button class="confirm" bindtap='upName'>确定</button>
+</view>

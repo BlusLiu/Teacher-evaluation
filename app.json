@@ -1,6 +1,5 @@
 {
   "pages": [
-    
     "pages/posts/daohang",
     "pages/user/user",
     "pages/index/index",
@@ -17,7 +16,10 @@
     "pages/teacher/teacherDetail",
     "pages/teacher/star",
     "pages/search/search",
-    "pages/posts/type"
+    "pages/posts/type",
+    "pages/posts/myclass_detail",
+    "pages/posts/myteacher_detail",
+    "pages/posts/serch_list"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -2,13 +2,9 @@
 body{
   background-color: #f3f3f3;
 }
-
-
 .top{
  width: 100%;
  height: 300%;
- 
- 
 }
 .bgc{
     float: left;
@@ -19,26 +15,31 @@ body{
 
 .head-pic{
   float: flex;
-   border-radius:2em;
-  border:2px solid #888;
+   border-radius:3em;
+   border:2px solid #888;
     margin-top: 70rpx;
-    margin-left: 100rpx;
+    margin-left: 70rpx;
     height: 230rpx;
     width: 230rpx;
 }
-
+.tea-cla{
+  margin-top: -220rpx;
+  margin-left: 330rpx;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  overflow: auto;
+}
 .name{
-    margin-top: -220rpx;
-    margin-left: 450rpx;
     font-weight: 600;
     font-size:40rpx;
 }
 
 .course{
-    margin-top: 20rpx;
-    margin-left: 450rpx;
     font-weight: 600;
     font-size:40rpx;
+    margin-top:10rpx;
 }
 
 .btn{
@@ -76,13 +77,12 @@ body{
     background: #3A58FF;
 }
 .label{
-   display: flex;
-  margin-top: 40rpx;
   width: 100%;
-  height: 110rpx;
-  margin-bottom: 20rpx;
-  
-  
+  margin-top: 1%;
+  background-color: white;
+  overflow: auto;
+  padding-bottom: 3%;
+  padding-left: 1.5%;
 }
 .people{
   display: flex;
@@ -90,71 +90,6 @@ body{
 }
 .userComment{
   width:100%;
-}
-.comment{
-  margin-top:4% ;
-  margin-left:20%;
-  padding:2%;
-  width:68%;
-  background-color:#aaa;
-  border: 1px dashed #888;
-  border-radius:1em;
-  position:relative;
-  display:a;
-}
-
-.img{
- 
-  float: left;
-  margin-left: 3%;
-  margin-top: -2%;
-  border-radius:2em;
-  border:2px solid #888;
-  width:100rpx;
-  height:100rpx;
-}
-.p{
-  text-indent:2em; 
-  margin-top:0.4%;
-  }
-.span{
-  position:absolute;
-  top:10%;right:4%;
-  font-size:0.9em;
-  font-weight:none;
-  color:#444}
-.name{
-  color:black;
-  font-weight:bold;
-  text-decoration:none;
-  }
-
-.up{
-  color:#555;
-  text-decoration:none;
-  position:absolute;
-  bottom:4%;
-  right:8%;
-}
-up:hover{
-  color:#000;
-}
-.search-keyword-item {
-    margin-top: 22rpx; 
-    margin-left: 20rpx;
-    display: inline-block;
-    padding:10rpx;
-    border: 1px solid #ccc;
-    border-radius: 15rpx;
-    background-color: #fbfbfb;
-    text-align: center;
-    color: #555;
-    width: 18%;
-    word-wrap: wrap;
-}
-.teacher-detail{
-   margin-top: 30rpx; 
-   text-align: center;
 }
 .gradebox{
   margin-top:7%;
@@ -247,6 +182,95 @@ up:hover{
 .homework-grade{
   font-size: 32rpx;
   font-weight: 400;
+}
+.commentbox{
+  background-color: white;
+  margin-top: 2%;
+  padding-top:3%;
+}
+.comment{
+  margin-top:4%;
+  padding: 3%;
+  width:100%;
+  background-color:white;
+  border-bottom: 2px solid #f3f3f3;
+  position:relative;
+  overflow: auto;
+}
+
+.img{
+  float: left;
+  margin-left: 0%;
+  margin-top: -3%;
+  border-radius:2em;
+  border:2px solid #888;
+  width:120rpx;
+  height:120rpx;
+}
+.a{
+  margin-left: 21%;
+  margin-top: -3%;
+  font-size: 40rpx;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.p{
+  text-indent:2em; 
+  margin-top:2%;
+  height:180rpx;
+  float: left;
+  margin-left: -4%;
+  width: 60%;
+  }
+.comment-line{
+  border-bottom:1rpx dashed #d3d3d3;
+  width: 72%;
+  margin-left: 20%;
+  margin-top:10rpx;
+  }
+.span{
+  position:absolute;
+  font-size:36rpx;
+  margin-top: -5%;
+  margin-left: 67%;
+  font-weight:none;
+  color:#444;
+  opacity: 0.8;
+  }
+.name{
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  }
+
+.up{
+  color:#555;
+  text-decoration:none;
+  position:absolute;
+  bottom:6%;
+  right:14%;
+  background-color: white;
+}
+up:hover{
+  color:#000;
+}
+.search-keyword-item {
+    margin-top: 22rpx; 
+    margin-left: 20rpx;
+    display: inline-block;
+    padding:10rpx;
+    border: 1px solid #ccc;
+    border-radius: 15rpx;
+    background-color: #fbfbfb;
+    text-align: center;
+    color: #555;
+    width: 18%;
+    word-wrap: wrap;
+}
+.teacher-detail{
+  margin-top: 7%; 
+  background-color: white;
+  overflow: auto; 
 }
 .office{
   width:90%;

@@ -2,7 +2,9 @@
 <view class="top">
     <image class="head-pic" src="../../img/head-pic.png" />
     <view class="name">用户名:{{username}}</view>
-    <image class="write" src="../../img/icon-write.png"/>
+    <button class="write-button" bindtap='changename'>
+      <image class="write" src="../../img/icon-write.png"/>
+    </button>
     <!--<view class="stid">学号：</view>
     <view class="college">学院：</view>-->
     <!--<image class="bgc" src="../../img/background.jpg" mode="aspectFill"/>-->

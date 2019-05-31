@@ -23,10 +23,10 @@
 
 <view>
   <swiper class="lunbo" indicator-dots="true" autoplay="true" interval="3000" circular="true">
-      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
-      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
-      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
-      <swiper-item><image src="../../img/background.jpg"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559834695&di=41b21f1a1523c29201095449b869b419&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170505%2F5eff08b119b14495be6f708de24de2e9_th.jpeg"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559240042649&di=143c778404fc340e390c188a22446a32&imgtype=0&src=http%3A%2F%2Fzhejiang.eol.cn%2Fzhejiang_gkkx%2F201503%2FW020150318313773570683.jpg"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="http://p1.wowodx.com/wow_article_img/hangdiandianziqingxie/png/7ce4a446-2fd2-4667-9e61-be5f5dfafa2a.png"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559240697420&di=0a863842277f4417a33f5c132577d584&imgtype=0&src=http%3A%2F%2Fwww.photo1990.com%2Fphotos%2Fbig_6fadfc90-df7a-4758-9423-3049ec7e9a48.jpg"></image></swiper-item>
   </swiper>
 </view>
 
@@ -50,7 +50,7 @@
     <view class="ranking-top-peoplenumber">点评人数</view>
   </view>
    <block wx:for="{{teacher}}" wx:for-index="index" wx:for-item="teacher">
-    <navigator class="ranking-list" url="../teacher/teacherDetail?id={{teacher.tid}}" ><!-- 根据index确定页面内容（未完成） -->
+    <navigator class="ranking-list" url="../teacher/teacherDetail?id={{teacher._id}}" >
       <image src="{{teacher.pic}}" class="ranking-list-pic"></image>
       <view class="ranking-list-teachername">{{teacher.tname}}</view>
       <view class="ranking-list-teachclass">{{teacher.cname}}</view>
